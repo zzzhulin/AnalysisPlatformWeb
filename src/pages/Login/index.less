@@ -1,0 +1,83 @@
+.login {
+  &::after {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: url(../../assets/login/bg.png) no-repeat;
+    content: '';
+  }
+  :global {
+    a {
+      display: block;
+    }
+    input:-internal-autofill-previewed,
+    input:-internal-autofill-selected {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+    input::placeholder {
+      color: #9e9e9f;
+      font-size: 13px;
+    }
+    .ant-input-affix-wrapper {
+      width: 283px;
+      height: 39px;
+      padding-left: 9px;
+      background: url(../../assets/login/input.png) no-repeat;
+      background-color: transparent;
+      border: none;
+    }
+    .ant-input-prefix {
+      margin-right: 11px;
+    }
+  }
+  .content {
+    box-sizing: content-box;
+    width: 349px;
+    margin: 0 auto;
+    padding-top: 375px;
+    padding-right: 70px;
+    &::after {
+      display: block;
+      clear: both;
+      height: 0;
+      visibility: hidden;
+      content: '';
+    }
+  }
+  .logo {
+    height: 54px;
+    margin-bottom: 98px;
+    text-align: right;
+    vertical-align: top;
+  }
+  .company {
+    margin-right: 2px;
+    margin-bottom: 33px;
+    text-align: right;
+  }
+  .loginForm {
+    float: right;
+    width: 283px;
+  }
+  .submit {
+    display: block;
+    width: 119px;
+    height: 49px;
+    margin: 20px 0 0 76px;
+    color: #fff;
+    font-size: 21px;
+    letter-spacing: -2px;
+    text-shadow: none;
+    background: url(../../assets/login/btn.png) no-repeat center;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
